@@ -7,6 +7,7 @@ sap.ui.define(
   
       return BaseController.extend("sls.jbd.subbd.sljbdttcsubbduem.controller.App2", {
         onInit: function() {
+           this.setModel()
         }
       });
     }
