@@ -2,7 +2,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
   "use strict";
 
   return Controller.extend(
-    "sls.jbd.subbd.sljbdttcsubbduem.controller.Worklist",
+    "sls.jbd.subbd.sljbdttcsubbduem.controller.Worklist1",
     {
       onInit: function () {},
       onPressLink: function (oEvent) {
