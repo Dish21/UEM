@@ -5,7 +5,7 @@ sap.ui.define(
     function(BaseController) {
       "use strict";
   
-      return BaseController.extend("sls.jbd.subbd.sljbdttcsubbduem.controller.App", {
+      return BaseController.extend("sls.jbd.subbd.sljbdttcsubbduem.controller.App2", {
         onInit: function() {
         }
       });
