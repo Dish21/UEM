@@ -1,0 +1,269 @@
+<mvc:View controllerName="sls.jbd.subbd.sljbdttcsubbduem.controller.Worklist"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:upload="sap.m.upload"
+    xmlns:core="sap.ui.core"
+    xmlns:gt="sap.ui.table"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:vm="sap.ui.fl.variants"
+    xmlns:svm="sap.ui.comp.smartvariants"
+    xmlns:chart="sap.suite.ui.microchart">
+    <Page title="{i18n>appDescription}" showHeader="true" titleAlignment="Center" enableScrolling="true" floatingFooter="false">
+        <HeaderContainer>
+            <GenericTile header="" class="sapUiTinyMargin" press="onPress_WLStatusKPI" tooltip="">
+                <TileContent>
+                    <HBox>
+                        <NumericContent value="" tooltip="" withMargin="false" class="sapUiMediumMarginEnd sapUiMediumMarginBottom" />
+                        <chart:RadialMicroChart size="M" percentage="" tooltip="" class="sapUiMediumMarginBegin sapUiTinyMarginBottom" valueColor="" />
+                    </HBox>
+                </TileContent>
+            </GenericTile>
+        </HeaderContainer>
+        <content>
+            <fb:FilterBar id="filterbar" persistencyKey="myPersKey" showClearOnFB="true" reset="onClearWorklistFilter" clear="onClearWorklistFilter" search="onSearch_WorklistFilter" afterVariantLoad="onAfterVariantLoad" useToolbar="false" filterContainerWidth="16rem" filterChange=".onFilterChange" filterBarExpanded="true">
+                <fb:filterItems>
+                    <fb:FilterItem name="A" label="{i18n>PostingID}">
+                        <fb:control>
+                            <Input value="" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="" />
+                        </fb:control>
+                    </fb:FilterItem>
+                    <fb:FilterItem name="B" label="{i18n>PostingPeriod}">
+                        <fb:control>
+                            <DateRangeSelection delimiter="-" dateValue="" secondDateValue="" valueFormat="YYYY-MM-dd" displayFormat="dd-MM-yyyy" />
+                        </fb:control>
+                    </fb:FilterItem>
+                    <fb:FilterItem name="C" label="{i18n>IDstatus}">
+                        <fb:control>
+                            <Select forceSelection="false" selectedKey="" items="{path : '/', filters : [ { path : '', operator : 'EQ', value1 : ''}],sorter:{path:''}}">
+                                <core:Item key="{}" text="{}" />
+                            </Select>
+                        </fb:control>
+                    </fb:FilterItem>
+                    <fb:FilterItem name="D" label="{i18n>Department}">
+                        <fb:control>
+                            <Input value="" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="" />
+                        </fb:control>
+                    </fb:FilterItem>
+                    <fb:FilterItem name="E" label="{i18n>SectionName}">
+                        <fb:control>
+                            <Input value="" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="" />
+                        </fb:control>
+                    </fb:FilterItem>
+                    <fb:FilterItem name="F" label="{i18n>CostCode}">
+                        <fb:control>
+                            <Input value="" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="" />
+                        </fb:control>
+                    </fb:FilterItem>
+
+                    <fb:FilterItem name="G" label="{i18n>PostingPeriod}">
+                        <fb:control>
+                            <DateRangeSelection delimiter="-" dateValue="" secondDateValue="" valueFormat="YYYY-MM-dd" displayFormat="dd-MM-yyyy" />
+                        </fb:control>
+                    </fb:FilterItem>
+                    <fb:FilterItem name="H" label="{i18n>BidStatus}">
+                        <fb:control>
+                            <Select forceSelection="false" selectedKey="" items="{path : '/', filters : [ { path : '', operator : 'EQ', value1 : ''}],sorter:{path:''}}">
+                                <core:Item key="{}" text="{}" />
+                            </Select>
+                        </fb:control>
+                    </fb:FilterItem>
+                </fb:filterItems>
+            </fb:FilterBar>
+            <IconTabBar class="sapUiTinyContentPaddingTop sapUiTinyMarginTop" expandable="false" selectedKey="{objectView>/Object_IconTabSelectedKey}" select="onSelectIconTabBar">
+                <items>
+                    <IconTabFilter icon="sap-icon://menu" design="Horizontal" text="{i18n>RegularEstablishedVacancy}" key="1">
+                        <gt:Table rows="" visibleRowCount="" selectionMode="None" class="sapUiNoContentPadding sapUiNoMargin">
+                            <gt:extension>
+                                <OverflowToolbar style="Standard">
+                                    <SegmentedButton selectedKey="" select="onChangeSegmentedButton">
+                                        <items>
+                                            <SegmentedButtonItem text="{i18n>Postings}" key="0" />
+                                            <SegmentedButtonItem text="{i18n>DraftPostings}" key="1" />
+                                        </items>
+                                    </SegmentedButton>
+                                    <ToolbarSpacer />
+                                    <Button icon="sap-icon://excel-attachment" type="Accept" press="onPress_ExcelExport_Worklist_Table" />
+                                </OverflowToolbar>
+                            </gt:extension>
+                            <gt:columns>
+                                <gt:Column hAlign="Center" label="{i18n>PostingID}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>ExtendedPosition}" width="12rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>IDstatus}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>PostingPeriodStartDate}" width="13rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>PostingPeriodEndDate}" width="12rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>Department}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>SectionName}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>CostCenter}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>BidStatus}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>SubmmssionDate}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>SubmissionTime}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                            </gt:columns>
+                        </gt:Table>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://menu" design="Horizontal" text="{i18n>MonthPreBidEstablishedVacancy}" key="2">
+                        <gt:Table rows="" visibleRowCount="" selectionMode="None" class="sapUiNoContentPadding sapUiNoMargin">
+                            <gt:extension>
+                                <OverflowToolbar style="Standard">
+                                    <SegmentedButton selectedKey="" select="onChangeSegmentedButton">
+                                        <items>
+                                            <SegmentedButtonItem text="{i18n>Postings}" key="0" />
+                                            <SegmentedButtonItem text="{i18n>DraftPostings}" key="1" />
+                                        </items>
+                                    </SegmentedButton>
+                                    <ToolbarSpacer />
+                                    <Button icon="sap-icon://excel-attachment" type="Accept" press="onPress_ExcelExport_Worklist_Table" />
+                                </OverflowToolbar>
+                            </gt:extension>
+                            <gt:columns>
+                                <gt:Column hAlign="Center" label="{i18n>PostingID}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>ExtendedPosition}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>PositionTitle}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>Department}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>CostCode}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>SectionName}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>WorkLocation}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>Crew}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>Shift}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>HoursWork}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>OffDays}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>IDstatus}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>PostingPeriodStartDate}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>PostingPeriodEndDate}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>AssignTrainingDate}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>TransferDate}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>Results}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>ResultUpdate}" width="10rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                            </gt:columns>
+                        </gt:Table>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button icon="sap-icon://employee" text="Object" type="Emphasized" press="onPressLink" />
+                <Button icon="sap-icon://employee" text="Employee" type="Emphasized" press="onPressLink1" />
+                <Button icon="sap-icon://employee" text="Posting" type="Emphasized" press="onPressLink2" />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

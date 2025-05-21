@@ -1,0 +1,237 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:gt="sap.ui.table"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:commons="sap.suite.ui.commons">
+    <VBox>
+        <l:BlockLayout background="Dashboard" class="sapUiNoContentPadding sapUiNoMargin">
+            <l:BlockLayoutRow class="sapUiNoContentPadding sapUiNoMargin">
+                <l:BlockLayoutCell backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" class="sapUiNoContentPadding sapUiNoMargin">
+                    <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                        <f:content>
+                            <!-- <Label text="{i18n>Union}" design="Bold" />
+                            <Select forceSelection="false" selectedKey="{path:'',type: 'sap.ui.model.type.String'}" items="{path : '/', sorter: [{path: ''}], filters : [ { path : '', operator : 'EQ', value1 : ''} ]}">
+                                <core:Item text="{TXVAL}" key="{UNQID}" />
+                                <layoutData>
+                                    <l:GridData span="XL4 L4 M4 S11" />
+                                </layoutData>
+                            </Select> -->
+                            <Label text="{i18n>PostingID}" design="Bold" />
+                            <Input editable="false">
+                                <layoutData>
+                                    <l:GridData span="XL4 L4 M4 S11" />
+                                </layoutData>
+                            </Input>
+                            <Label text="{i18n>PersonnelSubArea}" design="Bold" />
+                            <Input editable="false">
+                                <layoutData>
+                                    <l:GridData span="XL4 L4 M4 S11" />
+                                </layoutData>
+                            </Input>
+                            <Label text="{i18n>MaintenanceSeniorityGroup}" design="Bold" />
+                            <Input editable="false">
+                                <layoutData>
+                                    <l:GridData span="XL4 L4 M4 S11" />
+                                </layoutData>
+                            </Input>
+                            <Label text="{i18n>Department}" design="Bold" />
+                            <Input editable="false">
+                                <layoutData>
+                                    <l:GridData span="XL4 L4 M4 S11" />
+                                </layoutData>
+                            </Input>
+                            <Label text="{i18n>Section}" design="Bold" />
+                            <Input editable="false">
+                                <layoutData>
+                                    <l:GridData span="XL4 L4 M4 S11" />
+                                </layoutData>
+                            </Input>
+                            <Label text="{i18n>CostCenter}" design="Bold" />
+                            <Input editable="false">
+                                <layoutData>
+                                    <l:GridData span="XL4 L4 M4 S11" />
+                                </layoutData>
+                            </Input>
+                        </f:content>
+                    </f:SimpleForm>
+                </l:BlockLayoutCell>
+            </l:BlockLayoutRow>
+        </l:BlockLayout>
+        <Panel expandable="true" expanded="true" expand="Step1Expend" width="auto" class="sapUiNoContentPadding sapUiNoMargin" headerText="{i18n>SelectPositionDetails}">
+            <l:BlockLayout background="Dashboard" class="sapUiNoContentPadding sapUiNoMargin">
+                <l:BlockLayoutRow class="sapUiNoContentPadding sapUiNoMargin">
+                    <l:BlockLayoutCell backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" class="sapUiNoContentPadding sapUiNoMargin">
+                        <gt:Table rows="3" visibleRowCount="3" selectionMode="None" class="sapUiNoContentPadding sapUiNoMargin">
+                            <gt:extension>
+                                <OverflowToolbar style="Standard">
+                                    <Title text="{i18n>PositionDetails}" />
+                                </OverflowToolbar>
+                            </gt:extension>
+                            <gt:columns>
+                                <gt:Column hAlign="Center" autoResizable="true" label="{i18n>PositionCode}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" width="11rem">
+                                    <Label text="{i18n>ExtendedPosition}" wrapping="true" design="Bold" textAlign="Center" />
+                                    <gt:template>
+                                        <Text wrapping="true" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>WorkLocation}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>Crew}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>Shift}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+
+                                <gt:Column hAlign="Center" label="{i18n>HoursWork}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>OffDays}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>PostingNotes}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>LastPositionHolder}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" label="{i18n>PayScale}" width="11rem">
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                            </gt:columns>
+                        </gt:Table>
+
+                       
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+            </l:BlockLayout>
+        </Panel>
+      
+        <Panel expandable="true" expanded="true" expand="Step1Expend" headerText="{i18n>PostingPeriodDetails}">
+            <l:BlockLayout background="Dashboard">
+                <l:BlockLayoutRow class="sapUiNoContentPadding sapUiNoMargin">
+                    <l:BlockLayoutCell backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD">
+                        <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                            <f:content>
+                                <Label text="{i18n>PostingPeriodStartDate}" design="Bold" />
+                                <Input>
+                                    <layoutData>
+                                        <l:GridData span="XL4 L4 M4 S11" />
+                                    </layoutData>
+                                </Input>
+                                <Label text="{i18n>PostingPeriodEndDate}" design="Bold" />
+                                <Input>
+                                    <layoutData>
+                                        <l:GridData span="XL4 L4 M4 S11" />
+                                    </layoutData>
+                                </Input>
+                            </f:content>
+                        </f:SimpleForm>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+            </l:BlockLayout>
+        </Panel>
+        <Panel expandable="true" expanded="true" expand="Step1Expend" headerText="{i18n>SpecialPosting}">
+            <l:BlockLayout background="Dashboard">
+                <l:BlockLayoutRow class="sapUiNoContentPadding sapUiNoMargin">
+                    <l:BlockLayoutCell backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD">
+                        <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                            <f:content>
+                                <Label text="{i18n>optionalDepartment}" design="Bold" />
+                                <Input>
+                                    <layoutData>
+                                        <l:GridData span="XL4 L4 M4 S11" />
+                                    </layoutData>
+                                </Input>
+                                <Label text="{i18n>optionalSection}" design="Bold" />
+                                <Input>
+                                    <layoutData>
+                                        <l:GridData span="XL4 L4 M4 S11" />
+                                    </layoutData>
+                                </Input>
+                                <Label text="{i18n>optionalCostCenter}" design="Bold" />
+                                <Input>
+                                    <layoutData>
+                                        <l:GridData span="XL4 L4 M4 S11" />
+                                    </layoutData>
+                                </Input>
+                            </f:content>
+                        </f:SimpleForm>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+            </l:BlockLayout>
+        </Panel>
+        <Panel expandable="true" expanded="true" expand="Step1Expend" width="auto" class="sapUiNoContentPadding sapUiNoMargin" headerText="{i18n>Attachment}">
+            <l:BlockLayout background="Dashboard" class="sapUiNoContentPadding sapUiNoMargin">
+                <l:BlockLayoutRow class="sapUiNoContentPadding sapUiNoMargin">
+                    <l:BlockLayoutCell backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" class="sapUiNoContentPadding sapUiNoMargin">
+                        <gt:Table rows="" visibleRowCount="" selectionMode="None" class="sapUiNoContentPadding sapUiNoMargin">
+                            <gt:extension>
+                                <OverflowToolbar style="Standard">
+                                    <ToolbarSpacer />
+                                    <Button text="{i18n>AddAttachment}" type="Emphasized" />
+                                </OverflowToolbar>
+                            </gt:extension>
+                            <gt:columns>
+                                <gt:Column hAlign="Center" width="20%">
+                                    <Label text="{i18n>FileName}" wrapping="true" />
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" width="20%">
+                                    <Label text="{i18n>UploadedBy}" wrapping="true" />
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" width="20%">
+                                    <Label text="{i18n>DateUploaded}" wrapping="true" />
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                                <gt:Column hAlign="Center" width="20%">
+                                    <Label text="{i18n>TimeUploaded}" wrapping="true" />
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+
+                                <gt:Column hAlign="Center" width="20%">
+                                    <Label text="{i18n>FileUploaded}" wrapping="true" />
+                                    <gt:template>
+                                        <Text text="" />
+                                    </gt:template>
+                                </gt:Column>
+                            </gt:columns>
+                        </gt:Table>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+            </l:BlockLayout>
+        </Panel>
+    </VBox>
+</core:FragmentDefinition>

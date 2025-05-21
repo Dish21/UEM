@@ -1,0 +1,392 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:gt="sap.ui.table"
+    xmlns:commons="sap.suite.ui.commons"
+    xmlns:f="sap.ui.layout.form">
+    <VBox>
+        <l:BlockLayout background="Dashboard" class="sapUiNoContentPadding sapUiNoMargin">
+            <l:BlockLayoutRow class="sapUiNoContentPadding sapUiNoMargin">
+                <l:BlockLayoutCell backgroundColorSet="ColorSet11" backgroundColorShade="ShadeD" class="sapUiNoContentPadding sapUiNoMargin">
+                    <gt:Table rows="" visibleRowCount="3" selectionMode="None">
+                        <gt:extension>
+                            <OverflowToolbar style="Standard">
+                                <Title text="{i18n>Vacancy1}" />
+                            </OverflowToolbar>
+                        </gt:extension>
+                        <gt:columns>
+                            <gt:Column hAlign="Center" autoResizable="true" label="{i18n>PositionCode}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>ExtendedPosition}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>WorkLocation}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>Crew}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>Shift}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>HoursWork}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>OffDays}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PostingNotes}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>EmployeeBadgenumber}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>EmployeeName}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>SeniorityDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>SenioritySeq}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>TrainingDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>TransferDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>ResultantVacancyDecision}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>ResultantVacancy}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>Comments}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PublishingNotes}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PublishedDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PublishedBy}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                        </gt:columns>
+                    </gt:Table>
+
+                    <gt:Table rows="" visibleRowCount="3" selectionMode="None" class="sapUiSmallMarginTop">
+                        <gt:extension>
+                            <OverflowToolbar style="Standard">
+                                <Title text="{i18n>ProbableVacancy1.1}" />
+                            </OverflowToolbar>
+                        </gt:extension>
+                        <gt:columns>
+                            <gt:Column hAlign="Center" autoResizable="true" label="{i18n>PositionCode}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>ExtendedPosition}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>WorkLocation}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>Crew}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>Shift}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>HoursWork}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>OffDays}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PostingNotes}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>EmployeeBadgenumber}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>EmployeeName}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>SeniorityDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>SenioritySeq}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>TrainingDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>TransferDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>ResultantVacancyDecision}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>ResultantVacancy}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>Comments}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PublishingNotes}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PublishedDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PublishedBy}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                        </gt:columns>
+                    </gt:Table>
+
+                    <gt:Table rows="" visibleRowCount="3" selectionMode="None" class="sapUiSmallMarginTop">
+                        <gt:extension>
+                            <OverflowToolbar style="Standard">
+                                <Title text="{i18n>Vacancy2}" />
+                            </OverflowToolbar>
+                        </gt:extension>
+                        <gt:columns>
+                            <gt:Column hAlign="Center" autoResizable="true" label="{i18n>PositionCode}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>ExtendedPosition}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>WorkLocation}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>Crew}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>Shift}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>HoursWork}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>OffDays}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PostingNotes}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>EmployeeBadgenumber}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>EmployeeName}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>SeniorityDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>SenioritySeq}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>TrainingDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>TransferDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>ResultantVacancyDecision}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" width="11rem">
+                                <Label text="{i18n>ResultantVacancy}" wrapping="true" design="Bold" textAlign="Center" />
+                                <gt:template>
+                                    <Text wrapping="true" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>Comments}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PublishingNotes}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PublishedDate}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                            <gt:Column hAlign="Center" label="{i18n>PublishedBy}" width="11rem">
+                                <gt:template>
+                                    <Text text="" />
+                                </gt:template>
+                            </gt:Column>
+                        </gt:columns>
+                    </gt:Table>
+                    <!-- <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                        <f:content>
+                            <VBox>
+                                <Toolbar>
+                                    <Title text="{i18n>PublishingNotes}" titleStyle="H4" />
+                                </Toolbar>
+                                <TextArea rows="4" width="100%" growing="false" liveChange="_onLC_TextArea">
+                                    <layoutData>
+                                        <l:GridData span="XL12 L12 M12 S12" />
+                                    </layoutData>
+                                </TextArea>
+                            </VBox>
+                        </f:content>
+                    </f:SimpleForm>
+
+                    <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="2" labelSpanM="2" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                        <f:content>
+                            <Label design="Bold" />
+                            <Input value="" editable="false">
+                                <layoutData>
+                                    <l:GridData span="XL3 L3 M3 S11" />
+                                </layoutData>
+                            </Input>
+                            <Label design="Bold">
+                                <layoutData>
+                                    <l:GridData span="XL2 L2 M2 S12" />
+                                </layoutData>
+                            </Label>
+                            <Input value="" editable="false">
+                                <layoutData>
+                                    <l:GridData span="XL3 L3 M3 S11" />
+                                </layoutData>
+                            </Input>
+                        </f:content>
+                    </f:SimpleForm> -->
+                   
+                </l:BlockLayoutCell>
+            </l:BlockLayoutRow>
+        </l:BlockLayout>
+    </VBox>
+</core:FragmentDefinition>

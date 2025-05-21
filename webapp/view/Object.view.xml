@@ -1,0 +1,58 @@
+<mvc:View controllerName="sls.jbd.subbd.sljbdttcsubbduem.controller.Object" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+	<Page id="_Id_ObjectView" title="{i18n>EstablishedVacancyPosting}" titleAlignment="Center">
+		<!--<f:ShellBar title="{i18n>appTitle}" homeIcon="{oGlobalModel>/backIcon}" showCopilot="false" showSearch="false" showProductSwitcher="false"-->
+		<!--	homeIconPressed="onPressBack" homeIconTooltip="Back" avatarPressed="onPressUserIcon">-->
+		<!--	<f:profile>-->
+		<!--		<Avatar src="{oGlobalModel>/USERIcon}"/>-->
+		<!--	</f:profile>-->
+		<!--</f:ShellBar>-->
+		<content>
+			<Toolbar width="100%" height="4rem"
+				visible="{=${MASTER_MODEL>/Labels/V_CLMPR_OKPI_AssinTo} || ${MASTER_MODEL>/Labels/V_CLMPR_OKPI_ReportedBy}|| ${MASTER_MODEL>/Labels/V_LPKPI_JobPosition}|| ${MASTER_MODEL>/Labels/V_LPKPI_Supervisor}|| ${MASTER_MODEL>/Labels/V_CLMPR_OKPI_ClaimType} || ${MASTER_MODEL>/Labels/V_CLMPR_OKPI_DateOfAccident}|| ${MASTER_MODEL>/Labels/V_CLMPR_OKPI_NatureOfDisability}|| ${MASTER_MODEL>/Labels/V_LPKPI_ClaimNumber}|| ${MASTER_MODEL>/Labels/V_LPKPI_PreferredPhone}|| ${MASTER_MODEL>/Labels/V_LPKPI_PreferredEmail}|| ${MASTER_MODEL>/Labels/V_CLMPR_OKPI_ClaimStatus}|| ${MASTER_MODEL>/Labels/V_LPKPI_DOB}|| ${MASTER_MODEL>/Labels/V_LPKPI_Pronoun}}">
+				<ScrollContainer width="100%" height="100%" vertical="false" focusable="true">
+					<HBox>
+						<GenericTag text="{i18n>PostingID}" class="sapUiTinyMargin">
+							<ObjectNumber number=""/>
+						</GenericTag>
+						<GenericTag text="{i18n>PostingStatus}" 
+							class="sapUiTinyMargin">
+							<ObjectNumber number="{objectView>/KPI_DATA/REPBY}"/>
+						</GenericTag>
+						<GenericTag text="{i18n>PostingStartDate}" class="sapUiTinyMargin">
+							<ObjectNumber number="{objectView>/KPI_DATA/POSIT}"/>
+						</GenericTag>
+						<GenericTag text="{i18n>PostingEndDate}"  class="sapUiTinyMargin">
+							<ObjectNumber number="{objectView>/KPI_DATA/MGRNM}"/>
+						</GenericTag>
+					</HBox>
+				</ScrollContainer>
+			</Toolbar>
+			<IconTabBar expandable="false" selectedKey="{objectView>/Object_IconTabSelectedKey}" id="id_Object_IconTab" select="onSelectIconTabBar">
+				<items>
+					<IconTabFilter icon="sap-icon://form" design="Horizontal" text="{i18n>ViewPosting}" key="1"
+						iconColor="Positive" >
+						<core:Fragment fragmentName="sls.jbd.subbd.sljbdttcsubbduem.view.IconTab_Fragments.Frag_PostingDetails" type="XML"/>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://form" design="Horizontal" text="{i18n>ViewPosting}" key="1"
+						iconColor="Positive" >
+						<core:Fragment fragmentName="sls.jbd.subbd.sljbdttcsubbduem.view.IconTab_Fragments.Frag_BidSheet" type="XML"/>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://form" design="Horizontal" text="{i18n>ViewPosting}" key="1"
+						iconColor="Positive" >
+						<core:Fragment fragmentName="sls.jbd.subbd.sljbdttcsubbduem.view.IconTab_Fragments.Frag_Results" type="XML"/>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<OverflowToolbar visible="{oGlobalModel>/vObjectFooter}">
+			
+				<ToolbarSpacer/>
+				<Button text="Resultant Vacancy" type="Accept" icon="sap-icon://save"
+					press="onPress_Resultant"/>
+				
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>
