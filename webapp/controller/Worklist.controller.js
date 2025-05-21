@@ -7,7 +7,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
       onInit: function () {},
       onPressLink: function (oEvent) {
         var nextview = sap.ui.core.UIComponent.getRouterFor(this);
-        nextview.navTo("object", {
+        nextview.navTo("object1", {
           objectId: "0",
         });
       },
